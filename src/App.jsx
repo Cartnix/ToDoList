@@ -1,5 +1,6 @@
 import AppParticles from "./components/Particles";
 import ToDoApp from "./components/ToDoApp";
+import { TodoProvider } from "./utils/ToDoContext";
 
 export default function App() {
 
@@ -7,7 +8,9 @@ export default function App() {
   return (
     <div>
       <AppParticles />
-      <ToDoApp />
+      <TodoProvider>
+        <ToDoApp />
+      </TodoProvider>
     </div>
   );
 }

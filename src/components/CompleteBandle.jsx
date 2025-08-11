@@ -1,22 +1,9 @@
 import { CheckOutlined } from '@ant-design/icons';
 
-export default function completeBundle() {
+export default function CompleteBundle() {
     return (
-        <div style={{
-            position: 'absolute',
-            top: '15px',
-            right: '15px',
-            width: '32px',
-            height: '32px',
-            backgroundColor: '#52c41a',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '50%',
-            color: 'white',
-            fontSize: '18px',
-        }}>
+        <div className="absolute top-[15px] right-[15px] w-8 h-8 bg-green-500 flex items-center justify-center rounded-full text-white text-lg">
             <CheckOutlined />
         </div>
-    )
+    );
 }
