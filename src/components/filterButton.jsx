@@ -10,6 +10,7 @@ export default function FilterButton({ icon, onClick }) {
         >
             <div
                 onMouseDown={() => setPressed(prev => !prev)}
+                onClick={onClick}
                 className={
                     `w-8 h-8 flex flex-col items-center justify-center rounded-[20px] p-1.5 relative transition-all duration-150 cursor-pointer ` +
                     (pressed
@@ -24,7 +25,7 @@ export default function FilterButton({ icon, onClick }) {
                 }}
             >
                 <div className="flex-1 flex items-center justify-center text-[18px]" style={{ color: 'var(--color-text-main)' }}>
-                    <span onClick={onClick} className="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         {icon}
                     </span>
                 </div>

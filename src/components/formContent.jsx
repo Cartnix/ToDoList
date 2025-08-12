@@ -8,7 +8,7 @@ export default function Fields() {
     const { title, setTitle, desc, setDesc, date, setDate, handleAdd} = useTodos()
 
     return (
-        <div className='mb-10 flex flex-col gap-4 p- max-w-[500px] w-full rounded-[10px] shadow-[0_4px_12px_var(--box-shadow-form)]  bg-[var(--color-bg-card)] p-[30px]'>
+        <div className='mb-10 flex flex-col gap-4 p- max-w-[500px] w-full rounded-[10px] form-shadow  bg-[var(--color-bg-card)] p-[30px]'>
             <ToggleWrapper />
             <h2 className='mb-4 text-center text-[var(--color-text-main)] font-bold text-2xl'>Добавить новую задачу</h2>
             <Input
@@ -37,7 +37,7 @@ export default function Fields() {
                 type='primary'
                 onClick={handleAdd}
                 style={{ marginTop: '20px', color: 'var(--color-text-main)' }}
-                disabled={!title.trim()}
+                disabled={!title.trim() || !date.trim()}
             >
                 Добавить задачу
             </Button>
